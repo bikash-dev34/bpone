@@ -1,0 +1,12 @@
+
+<?php
+/**
+ * This is the template for displaying the footer 
+ */
+
+ ?>
+ <?php wp_footer();?>
+
+
+  </body>
+</html>
