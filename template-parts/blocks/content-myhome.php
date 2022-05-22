@@ -38,13 +38,19 @@
                   </div>
 
                   <div class="block end" style="text-align: center">
+                 
                     <ul class="info-list">
-                      
-                      <li><span class="title">Address : </span><span class="value"><?php echo get_field('my_address');?></span></li>
-                      <li><span class="title">e-Mail : </span><span class="value"><a href="mailto:email@example.com"><?php echo get_field('my_email');?></a></span></li>
-                      <li><span class="title">Phone : </span><span class="value"><?php echo get_field('my_phone');?></span></li>
-                      <li><span class="title">Freelance : </span><span class="value available"><?php echo get_field('freelance');?></span></li>
+                     <?php 
+                  $rows=get_sub_field('my_information');
+                      if( $rows ) { 
+                    foreach($rows as $row){
+                      $title=$row['title'];
+                      $detail=$row['detail']; ?>
+                      <li><span class="title"><?php echo('$title');?> </span><span class="value"><?php echo('$detail');?></span></li>
+                     
                     </ul>
+                    
+                   <?php }}?>
                   </div>
                 </div>
               </div>
