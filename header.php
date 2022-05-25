@@ -76,10 +76,10 @@
 
           <!-- Social buttons -->
           <ul class="social-links">
-              <li><a class="tip social-button" href="#" title="Twitter"><i class="fa fa-twitter"></i></a>
+              <li><a class="tip social-button" href="#" title="Twitter"><i class="fab fa-twitter"></i></a>
             </li> <!-- Full list of social icons: http://fontawesome.io/icons/#brand -->
-            <li><a class="tip social-button" href="#" title="Facebook"><i class="fa fa-facebook"></i></a></li>
-            <li><a class="tip social-button" href="#" title="Google Plus"><i class="fa fa-google-plus"></i></a></li>
+            <li><a class="tip social-button" href="#" title="Facebook"><i class="fab fa-facebook"></i></a></li>
+            <li><a class="tip social-button" href="#" title="Google Plus"><i class="fab fa-linkedin"></i></a></li>
            
           </ul>
           <!-- /Social buttons -->

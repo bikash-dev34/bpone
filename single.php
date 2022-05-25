@@ -33,9 +33,9 @@
             <p>Praesent ac quam sed magna gravida interdum. Vivamus sed nunc lobortis, tempor ante ut, gravida nibh. Praesent sed euismod odio. Maecenas dui dui, euismod quis lobortis quis, dignissim ut eros. Curabitur cursus lacinia sollicitudin. Aenean vitae erat imperdiet, egestas nisi non, placerat sapien. In nec commodo justo. Nunc posuere lacinia neque eu malesuada. Sed lacus lacus, tincidunt id faucibus eget, sagittis sed enim. Nunc nec dapibus odio.</p>
 
             <div class="post-info">
-              <span class="autor"><i class="fa fa-fw fa-user"></i> John Doe</span>
+              <span class="autor"><i class="fab fa-fw fab-user"></i> John Doe</span>
               <span class="divider">|</span>
-              <span class="date"><i class="fa fa-fw fa-clock-o"></i> 12 December, 2016</span>
+              <span class="date"><i class="fab fa-fw fab-clock-o"></i> 12 December, 2016</span>
               <!-- Share Buttons -->
               <div class="btn-group share-buttons pull-right hidden-xs">
                 <a href="#" target="_blank" class="btn"><i class="fa fa-facebook"></i> </a>

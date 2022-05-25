@@ -15,7 +15,6 @@
      wp_enqueue_style('bpone-owl-carl',get_template_directory_uri() .'/assets/css/plugins/owl.carousel.css',array(),wp_get_theme()->get('Version'));
      wp_enqueue_style('bpone-magni-pop',get_template_directory_uri() .'/assets/css/plugins/magnific-popup.css',array(),wp_get_theme()->get('Version'));
      wp_enqueue_style('bpone-animate',get_template_directory_uri() .'/assets/css/plugins/animate.css',array(),wp_get_theme()->get('Version'));
-     wp_enqueue_style('bpone-fontawsm',get_template_directory_uri() .'/assets/css/plugins/font-awesome.css',array(),wp_get_theme()->get('Version'));
      wp_enqueue_style('bpone-main',get_template_directory_uri() .'/assets/css/plugins/main.css',array(),wp_get_theme()->get('Version'));
     
      //  scripts

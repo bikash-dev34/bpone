@@ -5,11 +5,11 @@
  * 
  */
 ?>
-<!-- Resume Subpage -->
+
             <section class="pt-page pt-page-3" data-id="resume">
               <div class="section-title-block">
-                <h2 class="section-title">Resume</h2>
-                <h5 class="section-description">6 Years of Experience</h5>
+                <h2 class="section-title"><?php echo get_field('section_title');?></h2>
+                <h5 class="section-description"><?php echo get_field('section_sub_title');?></h5>
               </div>
 
               <div class="row">

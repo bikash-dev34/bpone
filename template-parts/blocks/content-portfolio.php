@@ -7,7 +7,7 @@
 <!-- Portfolio Subpage -->
             <section class="pt-page pt-page-4" data-id="portfolio">
               <div class="section-title-block">
-                <h2 class="section-title">Portfolio</h2>
+                <h2 class="section-title"><?php echo get_field("enable_portfolio_section");?></h2>
                 <h5 class="section-description">My Best Works</h5>
               </div>
 

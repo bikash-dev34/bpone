@@ -39,21 +39,28 @@
 
                   <div class="block end" style="text-align: center">
                  
-                    <ul class="info-list">
-                     <?php 
-                  $rows=get_sub_field('my_information');
-                      if( $rows ) { 
-                    foreach($rows as $row){
-                      $title=$row['title'];
-                      $detail=$row['detail']; ?>
-                      <li><span class="title"><?php echo('$title');?> </span><span class="value"><?php echo('$detail');?></span></li>
-                     
+                    <?php
+							// Check rows exists.
+							if ( have_rows( 'my_information' ) ):
+								?>
+                 <ul class="info-list">
+									<?php
+									// Loop through rows.
+									while ( have_rows( 'my_information' ) ) :
+										the_row();
+										$title = get_sub_field( 'title' );
+										$value = get_sub_field( 'details' );
+										?>
+                     <li>
+                         <span class="title"><?php echo $title; ?></span><span      class="value"><?php echo $value; ?></span>
+                      </li>
+									<?php endwhile; ?>
+                  </ul>
+							<?php endif; ?>    
                     </ul>
-                    
-                   <?php }}?>
                   </div>
                 </div>
               </div>
             </section>
-            <!-- End of Home Subpage -->
+           
   

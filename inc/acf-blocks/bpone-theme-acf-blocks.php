@@ -37,21 +37,24 @@ add_action( 'acf/init', 'bpone_theme_init_block_types' );
 				),
 
 			));
-			// register a resume block
+			// register
+			//register a resume block
 			acf_register_block_type(array(
-				'name'=>'bpone-theme-resume',
-				'title'=>__('Resume'),
-				'description'=>__('A custom resume block'),
-				'render_template'=>'template-parts/blocks/content-resume.php',
+				'name'            => 'bpone-theme-resume', // A unique name that identifies the block
+				'title'           => __( 'About Me' ), // The display for your block
+				'description'     => __( 'A custom resume block.' ), //optional
+				'render_template' => 'template-parts/blocks/content-resume.php',
 				'category'        => 'bpone-blocks',
-				'icon'            => 'admin-post',// optional
-				'keywords'        => array( 'resume', 'cv' ), //optional
+				'icon'            => 'buddicons-topics',// optional
+				'keywords'        => array( 'resume' ), //optional
 				'mode'            => 'edit', //optional
 				'supports'        => array( //optional
 					'mode'  => false,
 					'align' => false,
 				),
+
 			));
+			
 			//register a portfolio
 			acf_register_block_type(array(
 				'name'            => 'bpone-theme-portfolio', // A unique name that identifies the block
@@ -60,7 +63,7 @@ add_action( 'acf/init', 'bpone_theme_init_block_types' );
 				'render_template' => 'template-parts/blocks/content-portfolio.php',
 				'category'        => 'bpone-blocks',
 				'icon'            => 'format-status',// optional
-				'keywords'        => array( 'portfolio', 'me' ), //optional
+				'keywords'        => array( 'portfolio' ), //optional
 				'mode'            => 'edit', //optional
 				'supports'        => array( //optional
 					'mode'  => false,
