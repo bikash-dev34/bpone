@@ -24,7 +24,8 @@
             </div>
             <?php if(have_rows('sub_title_testimonial')):?>
             <div class="testimonials owl-carousel">
-                <?php while( have_rows('sub_title_testimonial') ): the_row();?>
+                <?php while( have_rows('sub_title_testimonial') ): the_row();
+                $image=get_sub_field("client_image");?>
                 <!-- Testimonial 2 -->
                 <div class="testimonial-item">
                     <!-- Testimonial Content -->
@@ -39,7 +40,13 @@
                         <!-- Picture -->
                         <div class="testimonial-picture">
                             <!-- <img src="images/testimonials/testimonila_photo_2.png" alt=""> -->
-                            <img src="<?php wp_get_attachment_image('client_image');?>" alt="">
+                            <?php 
+                          
+                            if( !empty( $image ) ): ?>
+                            <img src="<?php echo esc_url($image['url']); ?>"
+                                alt="<?php echo esc_attr($image['alt']); ?>" />
+                            <?php endif; ?>
+
                         </div>
                         <!-- /Picture -->
                         <!-- Testimonial author information -->
@@ -79,7 +86,12 @@
 
 
                 <div class="service-info">
-                    <img src="<?php echo wp_get_attachment_image($service_img,'full');?>" alt="Responsive Design">
+                    <?php 
+                          
+                     if( !empty( $service_img ) ): ?>
+                    <img src="<?php echo esc_url($service_img['url']); ?>"
+                        alt="<?php echo esc_attr($service_img['alt']); ?>" />
+                    <?php endif;?>
                     <h4><?php echo $service_title;?></h4>
                     <p><?php echo $service_desc;?></p>
                 </div>
@@ -103,8 +115,12 @@
                   ?>
         <div class="col-sm-4 col-md-2 subpage-block">
             <div class="client_block">
-                <a href="#" target="_blank"><img src="<?php echo wp_get_attachment_image_src($client_logo,'full');?>"
-                        alt="image"></a>
+                <a href="#" target="_blank">
+                    <?php if( !empty(  $client_logo ) ): ?>
+                    <img src=" <?php echo esc_url( $client_logo['url']); ?>"
+                        alt="<?php echo esc_attr( $client_logo['alt']); ?>" />
+                    <?php endif;?>
+                </a>
             </div>
         </div>
         <?php endwhile;?>

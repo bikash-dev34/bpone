@@ -41,12 +41,12 @@ add_action( 'acf/init', 'bpone_theme_init_block_types' );
 			//register a resume block
 			acf_register_block_type(array(
 				'name'            => 'bpone-theme-resume', // A unique name that identifies the block
-				'title'           => __( 'About Me' ), // The display for your block
+				'title'           => __( 'Resume' ), // The display for your block
 				'description'     => __( 'A custom resume block.' ), //optional
 				'render_template' => 'template-parts/blocks/content-resume.php',
 				'category'        => 'bpone-blocks',
-				'icon'            => 'buddicons-topics',// optional
-				'keywords'        => array( 'resume' ), //optional
+				'icon'            => 'controls-play',// optional
+				'keywords'        => array( 'resume','cv' ), //optional
 				'mode'            => 'edit', //optional
 				'supports'        => array( //optional
 					'mode'  => false,
@@ -63,7 +63,7 @@ add_action( 'acf/init', 'bpone_theme_init_block_types' );
 				'render_template' => 'template-parts/blocks/content-portfolio.php',
 				'category'        => 'bpone-blocks',
 				'icon'            => 'format-status',// optional
-				'keywords'        => array( 'portfolio' ), //optional
+				'keywords'        => array( 'portfolio','works' ), //optional
 				'mode'            => 'edit', //optional
 				'supports'        => array( //optional
 					'mode'  => false,
