@@ -26,7 +26,8 @@
                 $event_1_name=get_field("event_program_1");
                 ?>
                 <h3>
-                    <?php echo $event_1_name;?></h3>
+                    <?php echo $event_1_name;?>
+                </h3>
             </div>
             <div class="timeline">
                 <!-- Single event -->
@@ -109,36 +110,6 @@
                 <?php endwhile;?>
             </div>
             <?php endif;?>
-
-            <!-- <div class="block-title">
-                <h3>Coding Skills</h3> -->
-            <!-- </div>
-            <div class="skills-info">
-                <h4>HML5</h4>
-                <div class="skill-container">
-                    <div class="skill-percentage skill-4"></div>
-                </div>
-
-                <h4>CSS3</h4>
-                <div class="skill-container">
-                    <div class="skill-percentage skill-5"></div>
-                </div>
-
-                <h4>jQuery</h4>
-                <div class="skill-container">
-                    <div class="skill-percentage skill-6"></div>
-                </div>
-
-                <h4>Wordpress</h4>
-                <div class="skill-container">
-                    <div class="skill-percentage skill-7"></div>
-                </div>
-
-                <h4>PHP</h4>
-                <div class="skill-container">
-                    <div class="skill-percentage skill-8"></div>
-                </div>
-            </div> -->
         </div>
     </div>
     <div class="row">

@@ -37,7 +37,7 @@
             <!-- Portfolio Item 1 -->
             <figure class="item" data-groups='["all", "media"]'>
                 <a class="ajax-page-load" href="portfolio-1.html">
-                    <img src="images/portfolio/1.jpg" alt="">
+                    <img src="/assets/images/portfolio/1.jpg" alt="">
                     <div>
                         <h5 class="name">Project Name</h5>
                         <small>Media</small>

@@ -33,7 +33,7 @@
 1. Fonts
 ============================================================================= */
 /* 7 stroke icons font by Pixeden */
-@import url('pe-icon-7-stroke.css'); /* Full icons list: http://themes-pixeden.com/font-demos/7-stroke/index.html */
+@import url('https://cdn.jsdelivr.net/npm/pixeden-stroke-7-icon@1.2.3/pe-icon-7-stroke/dist/pe-icon-7-stroke.min.css'); /* Full icons list: http://themes-pixeden.com/font-demos/7-stroke/index.html */
 
 /* Font awesome icons font */
 @import url('https://pro.fontawesome.com/releases/v5.10.0/css/all.css'); /* Full icons list: http://fontawesome.io/icons/ */

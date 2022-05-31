@@ -11,41 +11,42 @@
     <div class="row">
         <div class="col-sm-6 col-md-6 subpage-block">
             <div class="block-title">
-                <h3>Get in Touch</h3>
+                <?php 
+                $contet_title=get_field("content_title");
+                $content_des=get_field("content_description");?>
+                <h3>
+                    <?php echo $contet_title;?>
+                </h3>
             </div>
-            <p>Sed eleifend sed nibh nec fringilla. Donec eu cursus sem, vitae tristique ante. Cras pretium rutrum
-                egestas. Integer ultrices libero sed justo vehicula, eget tincidunt tortor tempus.</p>
-            <div class="contact-info-block">
-                <div class="ci-icon">
-                    <i class="pe-7s-icon pe-7s-map-marker"></i>
-                </div>
-                <div class="ci-text">
-                    <h5>Los Angeles, USA</h5>
-                </div>
-            </div>
+            <p>
+                <?php echo $content_des;?>
+            </p>
+
+
 
             <div class="contact-info-block">
+                <?php 
+                if(have_rows('contact_list_widget','option')):
+                while (have_rows('contact_list_widget','option')) : the_row();
+                $icon = get_sub_field('icon');
+                $info_text = get_sub_field('contact_info');
+                ?>
                 <div class="ci-icon">
-                    <i class="pe-7s-icon pe-7s-mail"></i>
+                    <i class="pe-7s-icon pe-7s-<?php echo $icon;?>"></i>
                 </div>
                 <div class="ci-text">
-                    <h5>alexsmith@example.com</h5>
+                    <h4> <?php echo $info_text;?></h4>
                 </div>
+                <?php endwhile;?>
+                <?php endif;?>
             </div>
+
             <div class="contact-info-block">
                 <div class="ci-icon">
                     <i class="pe-7s-icon pe-7s-call"></i>
                 </div>
                 <div class="ci-text">
                     <h5>+123 654 78900</h5>
-                </div>
-            </div>
-            <div class="contact-info-block">
-                <div class="ci-icon">
-                    <i class="pe-7s-icon pe-7s-check"></i>
-                </div>
-                <div class="ci-text">
-                    <h5>Freelance Available</h5>
                 </div>
             </div>
         </div>

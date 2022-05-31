@@ -18,7 +18,7 @@
         <?php
           $argsblog=array(
           'post_type'=>'post',
-          'posts_per_page'=>'3',                  
+          'posts_per_page'=>'',                  
            );
           $blogone=new WP_Query($argsblog);?>
 
@@ -31,7 +31,9 @@
           ?>
         <div class="item">
             <div class="blog-card">
+                <!-- content of post is inserted here from another file i.e index.php -->
                 <?php get_template_part('template-parts/content','blog');?>
+
             </div>
         </div>
         <?php 

@@ -71,23 +71,18 @@
         <h3><?php echo get_field('section_2_heading');?></h3>
     </div>
     <?php 
-                if(have_rows('service_content')):?>
+     if(have_rows('service_content')):?>
     <div class="row">
         <?php 
-                  while(have_rows('service_content')):the_row();
-                  
-                    $service_img=get_sub_field('service_image');
-                    $service_title=get_sub_field('service_title');
-                    $service_desc=get_sub_field('service_description');
-                  ?>
+         while(have_rows('service_content')):the_row();
+         $service_img=get_sub_field('service_image');
+         $service_title=get_sub_field('service_title');
+         $service_desc=get_sub_field('service_description');
+        ?>
         <div class="col-sm-6 col-md-3 subpage-block">
-
             <div class="service-block">
-
-
                 <div class="service-info">
-                    <?php 
-                          
+                    <?php  
                      if( !empty( $service_img ) ): ?>
                     <img src="<?php echo esc_url($service_img['url']); ?>"
                         alt="<?php echo esc_attr($service_img['alt']); ?>" />
@@ -106,13 +101,12 @@
         <h3><?php echo get_field('section_3_heading');?></h3>
     </div>
     <?php
-               if(have_rows('client')):?>
+     if(have_rows('client')):?>
     <div class="row">
         <?php 
-                  while(have_rows('client')):the_row();
-                  
-                    $client_logo=get_sub_field('client_logo'); 
-                  ?>
+         while(have_rows('client')):the_row();
+         $client_logo=get_sub_field('client_logo'); 
+        ?>
         <div class="col-sm-4 col-md-2 subpage-block">
             <div class="client_block">
                 <a href="#" target="_blank">
@@ -140,11 +134,8 @@
 
             <div class="fun-fact-block gray-bg">
                 <i class="pe-7s-icon pe-7s-smile"></i>
-                <h4><?php echo get_sub_field('heading');?>
-                </h4>
-                <span class="fun-value">
-                    <?php echo get_sub_field('activity_count');?>
-                </span>
+                <h4><?php echo get_sub_field('heading');?></h4>
+                <span class="fun-value"><?php echo get_sub_field('activity_count');?></span>
             </div>
         </div>
         <?php endwhile;?>
