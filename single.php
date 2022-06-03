@@ -4,37 +4,29 @@
 
 <div id="main" class="site-main">
     <div class="page-wrapper">
-        <a class="blog-back-button" href="index.html#blog"><i class="fa fa-angle-left"></i></a>
+        <?php 
+    $url = home_url( '/' );?>
+        <a class="blog-back-button" href="<?php echo $url;?>"><i class=" fa fa-angle-left"></i></a>
 
         <div class="blog-post-main-image">
-            <img class="post-image img-responsive" src="images/blog/blog_post_2_full.jpg" alt="blog-post-1" />
+            <img class="post-image img-responsive" src="<?php the_post_thumbnail('medium');?>"
+                alt="<?php the_title_attribute(); ?>" />
         </div>
 
         <div class="blog-post-content">
             <h1><?php the_title();?></h1>
-            <ul class="tags">
+            <!-- <ul class="tags">
                 <li><a>HTML5</a></li>
                 <li><a>CSS3</a></li>
                 <li><a>jQuery</a></li>
                 <li><a>Ajax</a></li>
                 <li><a>PHP5</a></li>
-            </ul>
+            </ul> -->
 
-            <?php the_post_thumbnail('medium');?>
+
 
             <h1>this is from single .php file</h1>
-            <p class="lead">hhhhh ipsum dolor sit amet, consectetur adipiscing elit. Etiam a fringilla elit, eu mattis
-                arcu. Curabitur augue augue, scelerisque sit amet varius eget, tristique at nisl. In euismod suscipit
-                tristique. Nulla sollicitudin pretium massa sit amet tristique.</p>
-
-            <p>Aenean porta quam quis tempus posuere. Integer tempor, elit in auctor scelerisque, arcu augue
-                rhoncusmauris, et hendrerit sem tellus vitae eros. Nulla feugiat ultrices posuere. Nullam
-            <h2>test1</h2>dignissim, sed molestie felis ultricies. Phasellus malesuada tellus
-            vitae eros bibendum, nec ultricies massa sollicitudin. Etiam justo neque, faucibus quis urna
-            interdum, interdum rutrum massa. Mauris et velit ac dolor luctus fringilla. Integer in mattis dui,
-            eget eleifend mauris. Fusce sagittis ipsum nec est finibus, vitae congue nunc elementum. Morbi
-            imperdiet nisl sem, at commodo leo posuere a. Maecenas eu laoreet lorem. Aenean fringilla cursus
-            augue, sed mollis dui.</p>
+            <p class="lead"><?php the_content(); ?></p>
 
             <blockquote>
                 <p>Vivamus volutpat auctor metus, venenatis ornare mi dictum sit amet. Aliquam erat volutpat.
@@ -53,9 +45,9 @@
                 sagittis sed enim. Nunc nec dapibus odio.</p>
 
             <div class="post-info">
-                <span class="autor"><i class="fab fa-fw fab-user"></i> John Doe</span>
+                <span class="autor"><i class="fab fa-fw fab-user"></i> <?php echo get_the_author(); ?></span>
                 <span class="divider">|</span>
-                <span class="date"><i class="fab fa-fw fab-clock-o"></i> 12 December, 2016</span>
+                <span class="date"><i class="fab fa-fw fab-clock-o"></i> <?php echo get_the_date(); ?></span>
                 <!-- Share Buttons -->
                 <div class="btn-group share-buttons pull-right hidden-xs">
                     <a href="#" target="_blank" class="btn"><i class="fab fa-facebook"></i> </a>
@@ -99,7 +91,8 @@
                             <div class="media-body">
                                 <div class="media-heading">
                                     <a href="#">Bryan Morris</a> <span class="divider">|</span> <span
-                                        class="light-gray">5 hours ago</span>
+                                        class="light-gray">5
+                                        hours ago</span>
                                 </div>
                                 <p>Donec fermentum elementum massa nec imperdiet. Quisque iaculis accumsan elit
                                     eget

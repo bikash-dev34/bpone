@@ -105,13 +105,13 @@ add_action( 'acf/init', 'bpone_theme_init_block_types' );
 
 			));
 			acf_register_block_type(array(
-				'name'            => 'bpone-theme-contact', // A unique name that identifies the block
-				'title'           => __( 'blog-post' ), // The display for your block
-				'description'     => __( 'A custom blog post block.' ), //optional
-				'render_template' => 'template-parts/blocks/content-contact.php',
+				'name'            => 'bpone-theme-index-portfolio', // A unique name that identifies the block
+				'title'           => __( 'portfolio-post' ), // The display for your block
+				'description'     => __( 'A custom portfolio post block.' ), //optional
+				'render_template' => 'template-parts/content/content-portfolio.php',
 				'category'        => 'bpone-blocks',
 				'icon'            => 'email',// optional
-				'keywords'        => array( 'blogpost', 'info' ), //optional
+				'keywords'        => array( 'portfolio', 'info' ), //optional
 				'mode'            => 'edit', //optional
 				'supports'        => array( //optional
 					'mode'  => false,

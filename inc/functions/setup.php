@@ -37,6 +37,8 @@ if(!function_exists('bpone_theme_setup')){
             add_theme_support('custom-logo',$argslogo);
             add_theme_support('post-thumbnails');
 
+            
+          
     }
    
 
@@ -45,6 +47,3 @@ if(!function_exists('bpone_theme_setup')){
 }
 
 add_action('after_setup_theme','bpone_theme_setup',0); 
-	
-
-

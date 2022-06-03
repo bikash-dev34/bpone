@@ -5,8 +5,10 @@
  */
 ?>
 <!-- Home Subpage -->
-<section class="pt-page pt-page-1 section-with-bg section-paddings-0"
-    style="background-image: url(assets/images/home_page_bg_1.jpg);" data-id="home">
+<?php
+$home_bak_img=get_field('home_background');?>
+<section class="pt-page pt-page-1 section-with-bg section-paddings-0" style=" background-image:
+    url('<?php echo esc_url( $home_bak_img['url'] ); ?>');" data-id="home">
     <div class="home-page-block-bg">
         <div class="mask"></div>
     </div>

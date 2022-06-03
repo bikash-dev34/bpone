@@ -6,6 +6,7 @@ $files_loader=array(
     'inc/functions/assets.php',
     'inc/functions/setup.php',
     'inc/functions/acf-options.php',
+    'inc/functions/custom-post-types.php',    
     'inc/acf-blocks/bpone-theme-acf-block-category.php',
 	'inc/acf-blocks/bpone-theme-acf-blocks.php',
 	'inc/acf-blocks/bpone-theme-render-callback.php',
