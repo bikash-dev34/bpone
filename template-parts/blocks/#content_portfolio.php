@@ -15,7 +15,17 @@
     <div class="portfolio-content">
 
         <!-- Portfolio filter -->
+        <ul id="portfolio_filters" class="portfolio-filters">
 
+            <?php
+            $terms=get_terms('portfolio_category');
+            foreach($terms as $term){?>
+            <li>
+                <a class="filter btn btn-sm btn-link"
+                    data-group="<?php echo $term->slug;?>"><?php echo $term->name;?></a>
+            </li>
+            <?php }
+            ?>
 
         </ul>
         <!-- End of Portfolio filter -->
@@ -36,13 +46,10 @@
                 $termsArray=get_the_terms($post->ID,'portfolio_category');
                 $termsSlug="";
                 foreach($termsArray as $term){
-                    $termsSlug.=$term->slug."";
-                   
+                    $termsSlug.=$term->slug.'';
                 }
-               
-                
             ?>
-            <figure class="item" data-groups="">
+            <figure class="item" data-groups='<?php echo $termsSlug;?>'>
                 <a class="ajax-page-load" href="<?php echo get_the_permalink(get_the_ID());?>">
                     <img src="<?php the_post_thumbnail_url();?>" alt="">
                     <div>

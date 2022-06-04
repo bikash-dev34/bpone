@@ -48,7 +48,7 @@ $args = array(
 'exclude_from_search' => false,
 'show_in_rest'        => true,
 'menu_icon'           => 'dashicons-format-gallery',
-'supports'            => array('title','editor','excerpt', 'thumbnail'),
+'supports'            => array('title','editor', 'thumbnail'),
 
 
 );
@@ -77,5 +77,6 @@ register_taxonomy('portfolio_category', array('portfolio'), array(
 );
 register_post_type('portfolio', $args);
 flush_rewrite_rules();
+  add_theme_support('post-thumbnails');
 }
 add_action('init', 'create_portfolio_function');

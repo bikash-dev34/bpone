@@ -236,9 +236,6 @@
   $(".site-main-menu").on("click", "a", function (e) {
     mobileMenuHide();
   });
-  // Added by bikash
-  //start 1
-
   $(document).ready(function () {
     $("#menu-item-26").find("a").attr("data-animation", "58");
     $("#menu-item-26").find("a").attr("data-goto", "1");
